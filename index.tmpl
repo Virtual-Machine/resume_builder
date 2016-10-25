@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Developer CV</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+	<div id="container">
+		<img id="logo" src="https://tech-asteroid.com/images/logo-background-new.png" alt="">
+		<div id="cvHeader">
+			<h2 id="cvName">{{ .Name }}</h2>
+			<h3 id="cvTitle">{{ .Title }}</h3>
+			<p id="cvObjective">{{ .Objective }}</p>
+		</div>
+		<div id="cvContact">
+			<span id="website"><i class="fa fa-desktop" aria-hidden="true">:</i>{{ .Website }}</span><span id="email"><i class="fa fa-envelope" aria-hidden="true">:</i>{{ .Email }}</span><span id="cell"><i class="fa fa-phone" aria-hidden="true">:</i>{{ .Phone }}</span>
+		</div>
+		<div id="cvTechnicalSkills">
+		<h4>Technical Skills</h4>
+	{{ range $key, $value := .TechnicalSkills }}
+			<div class="TechnicalSkill">
+				<p class="skillName">{{ $value.Skill }}</p>
+				<img src="{{ $value.Image }}" class="thumb">
+				<div class="graphNode" data-val="{{ $value.Level }}"></div>
+			</div>
+	{{ end }}
+		</div>
+		<div id="cvApplicationSkills">
+		<h4>Application Skills</h4>
+	{{ range $key, $value := .ApplicationSkills }}
+			<div class="ApplicationSkill">
+				<p class="skillName">{{ $value.Skill }}</p>
+				<img src="{{ $value.Image }}" class="thumb">
+				<div class="graphNode" data-val="{{ $value.Level }}"></div>
+			</div>
+	{{ end }}
+		</div>
+		<div id="cvEducation">
+		<h4>Education</h4>
+		<div id="eduContent">
+		<img src="icons/brocku.png" id="schoolImg">
+			<p id="cvSchool">{{ .Education.School }}</p>
+			<p id="cvLocation">{{ .Education.Location }}</p>
+			<p id="cvYears">{{ .Education.Years }}</p>
+			<p id="cvProgram">{{ .Education.Program }}</p>
+			<ul class="collection">
+	{{ range $key, $value := .Education.Notes }}
+				<li class="collection-item">{{ $value }}</li>
+	{{ end }}
+			</ul>
+		</div>
+		</div>
+		<div id="cvCertifications">
+		<h4>Certifications</h4>
+		<div id="certContent">
+		<a href="https://tech-asteroid.com/certifications.html">Official Certifications Link</a>
+		<ul class="collection">
+	{{ range $key, $value := .Certifications }}
+			<li class="collection-item">{{ $value.Name }}</li>
+	{{ end }}
+		</ul>
+		</div>
+		</div>
+		<div id="cvExperience">
+		<h4>Experience</h4>
+	{{ range $key, $value := .Experience }}
+		<div class="experience">
+			<p class="company">{{ $value.Company }}</p>
+			<p class="location">{{ $value.Location }}</p>
+			<p class="position">{{ $value.Position }}</p>
+			<p class="dates">{{ $value.Dates }}</p>
+		<ul class="collection">
+		{{ range $key2, $value2 := .Tasks }}
+			<li class="collection-item task">{{ $value2 }}</li>
+		{{ end }}
+		</ul>
+		</div>
+	{{ end }}
+		</div>	
+	</div>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/progress.min.js"></script>
+	<script src="graph.js"></script>
+</body>
+</html>

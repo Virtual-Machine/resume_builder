@@ -1,0 +1,175 @@
+html {
+	padding: 0;
+	margin: 0;
+} 
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: verdana;
+	font-size: 18px;
+	height: 100%;
+}
+
+h4 {
+	background-color: navy;
+	padding: 10px;
+	color: whitesmoke;
+	border-radius: 10px; 
+	text-align: center;
+	width: 350px;
+	font-size: 20px !important;
+}
+
+i {
+	margin-right: 10px;
+}
+
+#logo {
+	width: 100px;
+	float: right;
+}
+
+#container {
+	padding: 40px;
+}
+
+#cvName {
+	color: navy;
+}
+
+#cvTitle {
+	color: #1786b9;
+}
+
+#cvObjective {
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+#cvSchool {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#cvYears {
+	float: right;
+	color: #084b97;
+}
+
+#cvTechnicalSkills, #cvApplicationSkills, #cvCertifications, #cvEducation {
+	display: inline-block;
+	width: 49.5%;
+	vertical-align: top;
+	margin-bottom: 30px;
+}
+
+#schoolImg {
+	float: right;
+	width: 100px;
+}
+
+.collection-item {
+	background-color: #f9f9f9 !important;
+}
+
+.TechnicalSkill, .ApplicationSkill {
+	display: inline-block;
+	position: relative;
+	width: 180px;
+	height: 150px;
+	text-align: center;
+	font-weight: bold;
+	border: 2px solid #07707d;
+	background-color: #ddd;
+	border-radius: 10px;
+	padding-top: 20px;
+}
+
+.graphNode {
+	width: 50%;
+	margin: auto;
+}
+
+.skillName {
+	position: absolute;
+	bottom: 2px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+#eduContent, #certContent {
+	background-color: white;
+	padding-left: 40px;
+	padding-right: 40px;
+	border-radius: 10px;
+}
+
+#cvContact {
+	background: url("icons/graphite.jpg");
+	height: 50px;
+	line-height: 50px;
+	color: whitesmoke;
+	margin-bottom: 30px;
+}
+
+#cvContact>span {
+	display: inline-block;
+	width: 33%;
+	text-align: center;
+}
+
+
+.experience {
+	position: relative;
+	display: inline-block;
+	width: 49.5%;
+	vertical-align: top;
+	padding-right: 20px;
+	font-size: 14px;
+	border: 2px solid #eee;
+	border-radius: 10px;
+	background-color: #e0e0e0;
+}
+
+.collection {
+	clear: right;
+}
+
+.company {
+	font-weight: bold;
+	color: navy;
+	font-size: 14px;
+}
+
+.location {
+	position: absolute;
+	top:0;
+	right: 20px;
+}
+
+.position {
+	font-weight: bold;
+}
+
+.dates {
+	position: absolute;
+	top:43px;
+	right: 20px;
+}
+
+.task {
+	font-size: 18px;
+}
+
+.thumb {
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	width: 35px;
+	height: 35px;
+	background-color: white;
+	border-radius: 10px; 
+	padding: 2px;
+}
